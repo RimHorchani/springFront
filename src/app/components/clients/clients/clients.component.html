@@ -1,0 +1,31 @@
+<p>Liste des clients</p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">LastName</th>
+      <th scope="col">CIN</th>
+      <th scope="col">Adress</th>
+      <th scope="col">Actions</th>
+
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of clients">
+    <tr>
+      <th scope="row">{{item.Id}}</th>
+      <td>{{item.name}}</td>
+      <td>{{item.lastname}}</td>
+      <td>{{item.cin}}</td>
+      <td>{{item.adresse}}</td>
+      <td>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary">Update</button>
+          <button type="button" class="btn btn-danger">Delete</button>
+          <button type="button" class="btn btn-success">View</button>
+        </div>
+      </td>
+
+    </tr>
+  </tbody>
+</table>
